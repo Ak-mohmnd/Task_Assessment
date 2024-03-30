@@ -4,6 +4,8 @@ Overview of dependencies and config used in this repo.
 
 ## Dependencies
 
+- Run `npm init`
+
 - Run `npm install`
 
 - Run `npm install Cypress`
