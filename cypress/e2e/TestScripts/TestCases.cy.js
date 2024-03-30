@@ -33,7 +33,7 @@ describe('QA TASK ASSESSMENT', () =>
         TestAssessment.TC01_ProductSearch(SearchingName)
     })
 
-    it.only('[TC02] This function will Add a Product to Cart Successfully',()=>
+    it('[TC02] This function will Add a Product to Cart Successfully',()=>
     {
         TestAssessment.TC02_AddCart(WatchName)
     })
