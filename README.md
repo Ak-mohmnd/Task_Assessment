@@ -24,4 +24,5 @@ Overview of dependencies and config used in this repo.
 ## Note
 - We have some cookies issue in the Webiste, Due to using different sessions values in thw website and The Website is also not to stable --- I already bypass the cookies but it doesn't work effectively
 
-`At one time -- We can run single test with it.only to avoid such cookies & session issue`
+## At one time -- We can run single test to avoid such cookies & session issue
+- `it.only`
