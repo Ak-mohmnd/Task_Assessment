@@ -23,6 +23,10 @@ Overview of dependencies and config used in this repo.
 
 - Run `npx cypress open`
 
+## Cypress Run (cypress.io)
+- Run `npx cypress run --record --key "36ca5f3d-8a69-4c5e-af8a-5b9d02dfb159" --spec "cypress/e2e/TestScripts/TestCases.cy.js"` or
+- Run `npx cypress run --record --key 36ca5f3d-8a69-4c5e-af8a-5b9d02dfb159`
+
 ## Note
 - We have some cookies issue in the Webiste, Due to using different sessions values in thw website and The Website is also not to stable --- I already bypass the cookies but it doesn't work effectively
 
