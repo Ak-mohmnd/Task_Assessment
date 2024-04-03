@@ -1,4 +1,4 @@
-const PageHeader = '//div//p[text()="Enjoy up to 30% off selected shoes. "]'
+const PageHeader = '//button[text()="Explore The Store"]'
 
 //Selectors for Successful Product Search
     const BTN_Search = '//button[@id="search-icon-button"]'
@@ -48,8 +48,8 @@ class TestAssessment
     *******************************************************************/
     TC01_ProductSearch(SearchingName)
     {  
-        cy.xpath(PageHeader).should('be.visible','Enjoy up to 30%')
-        cy.Click(BTN_Search, {force:true})
+        cy.xpath(PageHeader).should('be.visible','Explore The Store')
+        cy.xpath(BTN_Search).click()
         cy.EnterText(TXT_SearchFeild, SearchingName)
         cy.xpath(BTN_Icon).click()
         cy.wait(5000)
@@ -66,7 +66,7 @@ class TestAssessment
     *******************************************************************/
     TC02_AddCart(WatchName)
     {
-        cy.xpath(PageHeader).should('be.visible','Enjoy up to 30%')
+        cy.xpath(PageHeader).should('be.visible','Explore The Store')
         cy.Click(BTN_ProductCategory)
         cy.Click(BTN_FilterWatch)
         cy.xpath(`//div//p[text()="${WatchName}"]`).trigger('mouseover')
@@ -74,8 +74,7 @@ class TestAssessment
         cy.Click(`//div//p[text()="${WatchName}"]`)
         cy.wait(2000)
         cy.Click(BTN_AddCart)
-        cy.scrollTo('top')
-        cy.xpath(BTN_ViewCart).click({force:true})
+        cy.xpath(BTN_ViewCart).click()
         cy.xpath(LBL_CartProduct).should('contain', "Graff")
     }
 
@@ -88,14 +87,13 @@ class TestAssessment
     *******************************************************************/
     TC03_UserLogin(UserEmail, UserPass)
     {
-        cy.xpath(PageHeader).should('be.visible','Enjoy up to 30%')
+        cy.xpath(PageHeader).should('be.visible','Explore The Store')
         cy.Click(BTN_SignIn)
         cy.xpath(LBL_SignIn).should('be.visible')
         cy.EnterText(TXT_Useremail, UserEmail)
         cy.EnterText(TXT_Userpassword, UserPass)
-        cy.wait(1000)
         cy.Click(BTN_Login)
-        cy.wait(2000)
+        cy.wait(8000)
         cy.xpath(LBL_UserName).should('be.visible', "Abbas Khan")    
     
     }
@@ -109,7 +107,7 @@ class TestAssessment
     *******************************************************************/
     TC04_EmptySearch(EmptySearch)
     {
-        cy.xpath(PageHeader).should('be.visible','Enjoy up to 30%')
+        cy.xpath(PageHeader).should('be.visible','Explore The Store')
         cy.Click(BTN_Search).wait(2000)
         cy.EnterText(TXT_SearchFeild, EmptySearch)
         cy.xpath(BTN_Icon).click()
@@ -127,7 +125,7 @@ class TestAssessment
     *******************************************************************/
     TC05_InvalidLogin(InvalidEmail, InvalidPass)
     {
-        cy.xpath(PageHeader).should('be.visible','Enjoy up to 30%')
+        cy.xpath(PageHeader).should('be.visible','Explore The Store')
         cy.Click(BTN_SignIn)
         cy.xpath(LBL_SignIn).should('be.visible')
         cy.EnterText(TXT_Useremail, InvalidEmail)
@@ -148,7 +146,7 @@ class TestAssessment
     *******************************************************************/
     TC06_OutStock(WatchName)
     {
-        cy.xpath(PageHeader).should('be.visible','Enjoy up to 30%')
+        cy.xpath(PageHeader).should('be.visible','Explore The Store')
         cy.Click(BTN_ProductCategory)
         cy.Click(BTN_FilterWatch)
         cy.xpath(`//div//p[text()="${WatchName}"]`).trigger('mouseover')

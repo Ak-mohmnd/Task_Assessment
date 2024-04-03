@@ -5,7 +5,7 @@ module.exports = defineConfig({
   {
       projectId: "a1mpdm",  
       viewportWidth: 1440,
-      viewportHeight: 960,
+      viewportHeight: 946,
     
     
     setupNodeEvents(on, config) {
