@@ -38,7 +38,7 @@ describe('QA TASK ASSESSMENT', () =>
         TestAssessment.TC02_AddCart(WatchName)
     })
 
-    it.only('[TC03] This function will Login User Successfully',()=>
+    it('[TC03] This function will Login User Successfully',()=>
     {
         TestAssessment.TC03_UserLogin(UserEmail, UserPass)
     })
