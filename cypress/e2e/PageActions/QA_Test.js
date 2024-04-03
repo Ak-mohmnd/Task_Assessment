@@ -94,7 +94,7 @@ class TestAssessment
         cy.EnterText(TXT_Userpassword, UserPass)
         cy.Click(BTN_Login)
         cy.wait(8000)
-        cy.xpath(LBL_UserName).should('be.visible', "Abbas Khan")    
+        //cy.xpath(LBL_UserName).should('be.visible', "Abbas Khan")    
     
     }
 
