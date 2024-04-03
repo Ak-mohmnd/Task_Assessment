@@ -22,6 +22,12 @@ jobs:
           name: build
           if-no-files-found: error
           path: build
+          compression-level: 6
+          overwrite: false
+    env:
+        CI: 1
+        CYPRESS_CACHE_FOLDER: /Users/runner/.cache/Cypress
+        npm_config_cache: /Users/runner/.npm
 
   cypress-run:
     runs-on: ubuntu-22.04
