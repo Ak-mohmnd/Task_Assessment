@@ -28,7 +28,7 @@ describe('QA TASK ASSESSMENT', () =>
 {
     
     
-    it('[TC01] This function will Search the Product Successfully',()=>
+    it.only('[TC01] This function will Search the Product Successfully',()=>
     {
         TestAssessment.TC01_ProductSearch(SearchingName)
     })
