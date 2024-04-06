@@ -49,7 +49,7 @@ class TestAssessment
     TC01_ProductSearch(SearchingName)
     {  
         cy.xpath(PageHeader).should('be.visible','Explore The Store')
-        cy.xpath(BTN_Search).click()
+        cy.Click(BTN_Search)
         cy.EnterText(TXT_SearchFeild, SearchingName)
         cy.xpath(BTN_Icon).click()
         cy.wait(5000)
